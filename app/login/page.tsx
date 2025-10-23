@@ -1,10 +1,12 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Building, Mail, Lock, Eye, EyeOff, AlertCircle, Loader2, LayoutDashboard, Workflow, BarChart3, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export default function LoginPage() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     role: "",
     email: "",
@@ -29,9 +31,24 @@ export default function LoginPage() {
     // Simulate login process
     setTimeout(() => {
       setIsLoading(false)
-      // Handle login logic here
-      console.log("Login attempt:", formData)
-    }, 2000)
+      
+      // Check if Super Admin is selected
+      if (formData.role === "super-admin") {
+        // Store authentication data
+        localStorage.setItem('token', 'super-admin-token')
+        localStorage.setItem('user', JSON.stringify({
+          role: 'super-admin',
+          email: formData.email,
+          name: 'Super Administrator'
+        }))
+        
+        // Redirect to superadmin dashboard
+        router.push('/superadmin/dashboard')
+      } else {
+        // Handle other roles or show error
+        setError("Please select Super Admin role to access the dashboard")
+      }
+    }, 1500)
   }
 
   return (
