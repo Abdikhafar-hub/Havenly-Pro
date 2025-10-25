@@ -1,6 +1,151 @@
-[00:00:01.091] Server  LOG      ✓ Ready in 820ms
-[00:00:06.834] Server  LOG      ○ Compiling / ...
-[00:00:07.799] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:08.240] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:08.241] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:08.241] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761216987017}
+[00:00:01.113] Server  LOG      ✓ Ready in 817ms
+[00:00:06.572] Server  LOG      ○ Compiling / ...
+[00:00:08.554] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.827] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:09.827] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:09.827] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761417883583}
+[00:01:24.058] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:24.531] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:24.531] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/dashboard","route":"/property-admin/dashboard"}
+[00:01:24.531] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/dashboard","o":"http://localhost:3000/property-admin/dashboard","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761417959227}
+[00:01:28.147] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:28.592] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:28.592] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications","route":"/property-admin/communications"}
+[00:01:28.592] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761417963291}
+[00:02:30.244] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the render method of `CommunicationsPage`. 
+[00:02:31.571] Server  LOG      ✓ Compiled in 360ms
+[00:02:35.359] Server  LOG      ✓ Compiled in 388ms
+[00:02:38.372] Server  LOG      ✓ Compiled in 143ms
+[00:02:44.312] Server  LOG      ✓ Compiled in 366ms
+[00:02:52.700] Server  LOG      ✓ Compiled in 214ms
+[00:02:57.556] Server  LOG      ✓ Compiled in 141ms
+[00:03:02.111] Server  LOG      ✓ Compiled in 327ms
+[00:03:05.965] Server  LOG      ✓ Compiled in 122ms
+[00:03:10.880] Server  LOG      ✓ Compiled in 169ms
+[00:03:45.779] Server  LOG      ✓ Compiled in 252ms
+[00:03:45.941] Browser ERROR   uncaughtError: ReferenceError: newMessageOpen is not defined
+[00:03:50.989] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:51.004] Server  LOG      ✓ Compiled in 152ms
+[00:03:51.780] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418105803}
+[00:03:51.780] Browser ERROR   uncaughtError: ReferenceError: newMessageOpen is not defined
+[00:03:52.093] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:52.358] Browser ERROR   uncaughtError: ReferenceError: newMessageOpen is not defined
+[00:04:07.932] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:07.941] Server  LOG      ✓ Compiled in 336ms
+[00:04:08.799] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:09.244] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:09.244] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications","route":"/property-admin/communications"}
+[00:04:09.244] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418123943}
+[00:05:54.540] Server  LOG      ✓ Compiled in 0ms
+[00:05:57.386] Server  LOG      ✓ Compiled in 382ms
+[00:05:57.832] Browser ERROR   uncaughtError: ReferenceError: Select is not defined
+[00:06:22.610] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:06:22.611] Server  LOG      ✓ Compiled in 281ms
+[00:06:23.381] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418257416}
+[00:06:23.723] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:24.287] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:24.287] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications","route":"/property-admin/communications"}
+[00:06:24.287] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418258986}
+[00:06:31.647] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:31.925] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:31.925] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications/new","route":"/property-admin/communications/new"}
+[00:06:31.925] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications/new color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications/new","o":"http://localhost:3000/property-admin/communications/new","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418266624}
+[00:07:07.360] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:07.825] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:07:07.825] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications","route":"/property-admin/communications"}
+[00:07:07.825] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418302523}
+[00:07:19.224] Browser ERROR   ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx:354:1
+Parsing ecmascript source code failed
+  352 |     </div>
+  353 |   )
+> 354 | }
+      | ^
+  355 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx [Client Component Browser]
+    ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx [Client Component SSR]
+    ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx [Server Component]
+[00:07:21.529] Browser ERROR   ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx:354:1
+Parsing ecmascript source code failed
+  352 |     </div>
+  353 |   )
+> 354 | }
+      | ^
+  355 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx [Client Component Browser]
+    ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx [Client Component SSR]
+    ./Documents/havenly-pro/Frontend/app/property-admin/communications/new/page.tsx [Server Component]
+[00:07:24.039] Server  LOG      ✓ Compiled in 173ms
+[00:07:29.397] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:29.653] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:07:29.653] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications/new","route":"/property-admin/communications/new"}
+[00:07:29.653] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications/new color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications/new","o":"http://localhost:3000/property-admin/communications/new","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418324351}
+[00:07:34.112] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:34.502] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:07:34.503] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications","route":"/property-admin/communications"}
+[00:07:34.503] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418329201}
+[00:08:05.154] Server  LOG      ✓ Compiled in 192ms
+[00:08:05.280] Browser ERROR   uncaughtError: ReferenceError: ResponsiveContainer is not defined
+[00:08:09.166] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:09.180] Server  LOG      ✓ Compiled in 186ms
+[00:08:09.712] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418363972}
+[00:08:09.712] Browser ERROR   uncaughtError: ReferenceError: ResponsiveContainer is not defined
+[00:08:09.972] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:10.146] Browser ERROR   uncaughtError: ReferenceError: ResponsiveContainer is not defined
+[00:08:16.850] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:08:16.863] Server  LOG      ✓ Compiled in 155ms
+[00:08:17.646] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:17.943] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:17.943] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications","route":"/property-admin/communications"}
+[00:08:17.943] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418372641}
+[00:08:19.669] Server  LOG      ✓ Compiled in 147ms
+[00:09:03.025] Server  LOG      ✓ Compiled in 130ms
+[00:09:53.003] Server  LOG      ✓ Compiled in 381ms
+[00:09:55.563] Server  LOG      ✓ Compiled in 119ms
+[00:09:57.745] Server  LOG      ✓ Compiled in 158ms
+[00:10:56.516] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:56.804] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:10:56.804] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications/new","route":"/property-admin/communications/new"}
+[00:10:56.804] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications/new color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications/new","o":"http://localhost:3000/property-admin/communications/new","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418531502}
+[00:11:27.890] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:28.171] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:11:28.172] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/communications","route":"/property-admin/communications"}
+[00:11:28.172] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/communications color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/communications","o":"http://localhost:3000/property-admin/communications","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761418562869}
+[00:11:41.555] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the render method of `CommunicationsPage`. 
+[00:13:30.721] Server  LOG      ✓ Compiled in 173ms
+[01:12:50.947] Server  LOG      ✓ Compiled in 0ms
+[01:14:24.694] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:14:24.968] Browser ERROR   uncaughtError: ReferenceError: FileText is not defined
+[01:14:45.233] Server  LOG      ✓ Compiled in 267ms
+[01:14:45.238] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:14:45.915] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:14:46.175] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:14:46.175] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/settings","route":"/property-admin/settings"}
+[01:14:46.175] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/settings color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/settings","o":"http://localhost:3000/property-admin/settings","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761422360873}
+[01:15:41.964] Browser LOG     Settings saved
+[01:25:59.812] Server  LOG      ✓ Compiled in 414ms
+[01:30:12.473] Server  LOG      ✓ Compiled in 345ms
+[01:30:13.001] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:30:13.082] Server  LOG      ✓ Compiled in 40ms
+[01:30:13.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:30:13.356] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/property-admin/settings","route":"/property-admin/settings"}
+[01:30:13.356] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/property-admin/settings color: rgb(120, 120, 120) color: inherit {"dp":"/property-admin/settings","o":"http://localhost:3000/property-admin/settings","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1761423288054}

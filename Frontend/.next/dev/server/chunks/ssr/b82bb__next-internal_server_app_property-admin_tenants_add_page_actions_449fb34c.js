@@ -1,0 +1,7 @@
+module.exports = [
+"[project]/Documents/havenly-pro/Frontend/.next-internal/server/app/property-admin/tenants/add/page/actions.js [app-rsc] (server actions loader, ecmascript)", ((__turbopack_context__, module, exports) => {
+
+}),
+];
+
+//# sourceMappingURL=b82bb__next-internal_server_app_property-admin_tenants_add_page_actions_449fb34c.js.map
