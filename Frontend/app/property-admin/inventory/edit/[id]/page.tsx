@@ -209,7 +209,7 @@ export default function EditAssetPage() {
             Back
           </Button>
           <div>
-            <h1 className="text-3xl font-bold text-white">Edit Asset</h1>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Edit Asset</h1>
             <p className="text-slate-400 mt-2">Update asset information and details</p>
           </div>
         </div>

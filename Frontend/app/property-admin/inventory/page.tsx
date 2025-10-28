@@ -263,7 +263,7 @@ export default function InventoryManagement() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-white">Inventory & Assets Management</h1>
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Inventory & Assets Management</h1>
           <p className="text-slate-400 mt-2">Track and manage all physical assets across your property.</p>
         </div>
         <div className="flex items-center space-x-3">

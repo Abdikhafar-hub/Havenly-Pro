@@ -49,20 +49,33 @@ function LoginPage() {
         // Simulate login process
         setTimeout(()=>{
             setIsLoading(false);
-            // Check if Super Admin is selected
+            // Store authentication data and redirect based on role
             if (formData.role === "super-admin") {
-                // Store authentication data
                 localStorage.setItem('token', 'super-admin-token');
                 localStorage.setItem('user', JSON.stringify({
                     role: 'super-admin',
                     email: formData.email,
                     name: 'Super Administrator'
                 }));
-                // Redirect to superadmin dashboard
                 router.push('/superadmin/dashboard');
+            } else if (formData.role === "property-owner") {
+                localStorage.setItem('token', 'property-admin-token');
+                localStorage.setItem('user', JSON.stringify({
+                    role: 'property-admin',
+                    email: formData.email,
+                    name: 'Property Administrator'
+                }));
+                router.push('/property-admin/dashboard');
+            } else if (formData.role === "tenant") {
+                localStorage.setItem('token', 'tenant-token');
+                localStorage.setItem('user', JSON.stringify({
+                    role: 'tenant',
+                    email: formData.email,
+                    name: 'Tenant User'
+                }));
+                router.push('/tenant');
             } else {
-                // Handle other roles or show error
-                setError("Please select Super Admin role to access the dashboard");
+                setError("Please select a valid role to access the dashboard");
             }
         }, 1500);
     };
@@ -81,20 +94,20 @@ function LoginPage() {
                                 className: "w-full h-full object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 60,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute inset-0 bg-black/50"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 65,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                        lineNumber: 59,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -104,27 +117,27 @@ function LoginPage() {
                                 className: "absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 70,
+                                lineNumber: 82,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 71,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-1/2 left-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 72,
+                                lineNumber: 84,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                        lineNumber: 69,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -140,12 +153,12 @@ function LoginPage() {
                                             className: "text-white drop-shadow-lg"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                            lineNumber: 80,
+                                            lineNumber: 92,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 91,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -153,13 +166,13 @@ function LoginPage() {
                                         children: "Havenly Pro"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 94,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 78,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -169,12 +182,12 @@ function LoginPage() {
                                     children: "Smart Property Management, Simplified."
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 88,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -182,7 +195,7 @@ function LoginPage() {
                                 children: "Streamline your property operations with our comprehensive management platform designed for modern real estate professionals."
                             }, void 0, false, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 93,
+                                lineNumber: 105,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -198,12 +211,12 @@ function LoginPage() {
                                                     className: "text-blue-300"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                    lineNumber: 101,
+                                                    lineNumber: 113,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 100,
+                                                lineNumber: 112,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -211,13 +224,13 @@ function LoginPage() {
                                                 children: "Centralized Dashboard"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 103,
+                                                lineNumber: 115,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 111,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -230,12 +243,12 @@ function LoginPage() {
                                                     className: "text-blue-300"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                    lineNumber: 107,
+                                                    lineNumber: 119,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 106,
+                                                lineNumber: 118,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -243,13 +256,13 @@ function LoginPage() {
                                                 children: "Automated Workflows"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 121,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 117,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -262,12 +275,12 @@ function LoginPage() {
                                                     className: "text-blue-300"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                    lineNumber: 113,
+                                                    lineNumber: 125,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 112,
+                                                lineNumber: 124,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -275,31 +288,31 @@ function LoginPage() {
                                                 children: "Real-time Analytics"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 115,
+                                                lineNumber: 127,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 123,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 98,
+                                lineNumber: 110,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                        lineNumber: 76,
+                        lineNumber: 88,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                lineNumber: 57,
+                lineNumber: 69,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -325,12 +338,12 @@ function LoginPage() {
                                                         className: "text-white"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 131,
+                                                        lineNumber: 143,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                    lineNumber: 130,
+                                                    lineNumber: 142,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -340,7 +353,7 @@ function LoginPage() {
                                                             children: "Havenly Pro"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                            lineNumber: 134,
+                                                            lineNumber: 146,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -348,24 +361,24 @@ function LoginPage() {
                                                             children: "Smart Property Management"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                            lineNumber: 135,
+                                                            lineNumber: 147,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 145,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 141,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 140,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -373,7 +386,7 @@ function LoginPage() {
                                         children: "Welcome Back"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 139,
+                                        lineNumber: 151,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -381,13 +394,13 @@ function LoginPage() {
                                         children: "Please sign in to continue"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 140,
+                                        lineNumber: 152,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 127,
+                                lineNumber: 139,
                                 columnNumber: 13
                             }, this),
                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -397,7 +410,7 @@ function LoginPage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 158,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -405,13 +418,13 @@ function LoginPage() {
                                         children: error
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 147,
+                                        lineNumber: 159,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 145,
+                                lineNumber: 157,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -425,7 +438,7 @@ function LoginPage() {
                                                 children: "Login as"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 155,
+                                                lineNumber: 167,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -440,23 +453,7 @@ function LoginPage() {
                                                         children: "Select Role"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 165,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        value: "property-owner",
-                                                        children: "Property Owner"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 166,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                        value: "tenant",
-                                                        children: "Tenant"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 167,
+                                                        lineNumber: 177,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -464,19 +461,35 @@ function LoginPage() {
                                                         children: "Super Admin"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 168,
+                                                        lineNumber: 178,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                        value: "property-owner",
+                                                        children: "Property Admin"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
+                                                        lineNumber: 179,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                        value: "tenant",
+                                                        children: "Tenant"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
+                                                        lineNumber: 180,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 158,
+                                                lineNumber: 170,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 154,
+                                        lineNumber: 166,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -486,7 +499,7 @@ function LoginPage() {
                                                 children: "Email Address"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 186,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -497,7 +510,7 @@ function LoginPage() {
                                                         size: 18
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 178,
+                                                        lineNumber: 190,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -507,22 +520,22 @@ function LoginPage() {
                                                         onChange: handleChange,
                                                         required: true,
                                                         className: "w-full pl-10 pr-4 py-3 rounded-lg border border-gray-600 text-white bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200",
-                                                        placeholder: "Enter your email"
+                                                        placeholder: "Enter any email"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 179,
+                                                        lineNumber: 191,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 177,
+                                                lineNumber: 189,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 185,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -532,7 +545,7 @@ function LoginPage() {
                                                 children: "Password"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 193,
+                                                lineNumber: 205,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -543,7 +556,7 @@ function LoginPage() {
                                                         size: 18
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 197,
+                                                        lineNumber: 209,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -553,10 +566,10 @@ function LoginPage() {
                                                         onChange: handleChange,
                                                         required: true,
                                                         className: "w-full pl-10 pr-10 py-3 rounded-lg border border-gray-600 text-white bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200",
-                                                        placeholder: "Enter your password"
+                                                        placeholder: "Enter any password"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 198,
+                                                        lineNumber: 210,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -567,30 +580,30 @@ function LoginPage() {
                                                             size: 18
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                            lineNumber: 212,
+                                                            lineNumber: 224,
                                                             columnNumber: 37
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
                                                             size: 18
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                            lineNumber: 212,
+                                                            lineNumber: 224,
                                                             columnNumber: 60
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                        lineNumber: 207,
+                                                        lineNumber: 219,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                lineNumber: 196,
+                                                lineNumber: 208,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 204,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -601,12 +614,12 @@ function LoginPage() {
                                             children: "Forgot your password?"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                            lineNumber: 219,
+                                            lineNumber: 231,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 218,
+                                        lineNumber: 230,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -620,7 +633,7 @@ function LoginPage() {
                                                     className: "animate-spin"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                                    lineNumber: 232,
+                                                    lineNumber: 244,
                                                     columnNumber: 21
                                                 }, this),
                                                 "Signing in..."
@@ -628,13 +641,13 @@ function LoginPage() {
                                         }, void 0, true) : "Sign In"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                        lineNumber: 225,
+                                        lineNumber: 237,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 152,
+                                lineNumber: 164,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$havenly$2d$pro$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -650,7 +663,7 @@ function LoginPage() {
                                             children: "Privacy Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                            lineNumber: 245,
+                                            lineNumber: 257,
                                             columnNumber: 17
                                         }, this),
                                         " ",
@@ -662,41 +675,41 @@ function LoginPage() {
                                             children: "secure data practices"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                            lineNumber: 249,
+                                            lineNumber: 261,
                                             columnNumber: 17
                                         }, this),
                                         "."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                    lineNumber: 243,
+                                    lineNumber: 255,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                                lineNumber: 242,
+                                lineNumber: 254,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                        lineNumber: 125,
+                        lineNumber: 137,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                    lineNumber: 123,
+                    lineNumber: 135,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-                lineNumber: 122,
+                lineNumber: 134,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/havenly-pro/Frontend/app/login/page.tsx",
-        lineNumber: 55,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 }

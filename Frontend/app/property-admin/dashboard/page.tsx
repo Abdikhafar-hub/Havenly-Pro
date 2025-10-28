@@ -92,7 +92,7 @@ export default function PropertyAdminDashboard() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-white">Dashboard Overview</h1>
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Dashboard Overview</h1>
           <p className="text-slate-400 mt-2">Welcome back! Here's what's happening with your properties.</p>
         </div>
         <div className="flex items-center space-x-3">
@@ -288,15 +288,15 @@ export default function PropertyAdminDashboard() {
               <Users className="w-4 h-4 mr-3" />
               Add New Tenant
             </Button>
-            <Button variant="outline" className="w-full justify-start border-slate-600 text-slate-300 hover:bg-slate-700">
+            <Button className="w-full justify-start bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white">
               <CreditCard className="w-4 h-4 mr-3" />
               Record Payment
             </Button>
-            <Button variant="outline" className="w-full justify-start border-slate-600 text-slate-300 hover:bg-slate-700">
+            <Button className="w-full justify-start bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white">
               <Wrench className="w-4 h-4 mr-3" />
               Create Maintenance Request
             </Button>
-            <Button variant="outline" className="w-full justify-start border-slate-600 text-slate-300 hover:bg-slate-700">
+            <Button className="w-full justify-start bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white">
               <FileText className="w-4 h-4 mr-3" />
               Generate Report
             </Button>

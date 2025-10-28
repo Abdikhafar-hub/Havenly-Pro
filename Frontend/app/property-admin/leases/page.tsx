@@ -345,7 +345,7 @@ export default function LeasesPage() {
             <span>/</span>
             <span className="text-slate-300">Leases & Contracts</span>
           </div>
-          <h1 className="text-3xl font-bold text-white">Lease Management</h1>
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Lease Management</h1>
         </div>
         <Button 
           className="bg-slate-700 hover:bg-slate-600 text-white"

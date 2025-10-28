@@ -158,7 +158,7 @@ export default function AddAssetPage() {
             Back
           </Button>
           <div>
-            <h1 className="text-3xl font-bold text-white">Add New Asset</h1>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Add New Asset</h1>
             <p className="text-slate-400 mt-2">Add a new asset to your inventory</p>
           </div>
         </div>

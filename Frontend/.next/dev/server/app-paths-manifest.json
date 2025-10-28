@@ -1,7 +1,18 @@
 {
+  "/login/page": "app/login/page.js",
   "/page": "app/page.js",
-  "/property-admin/communications/new/page": "app/property-admin/communications/new/page.js",
-  "/property-admin/communications/page": "app/property-admin/communications/page.js",
   "/property-admin/dashboard/page": "app/property-admin/dashboard/page.js",
-  "/property-admin/settings/page": "app/property-admin/settings/page.js"
+  "/property-admin/properties/page": "app/property-admin/properties/page.js",
+  "/property-admin/tenants/page": "app/property-admin/tenants/page.js",
+  "/superadmin/dashboard/page": "app/superadmin/dashboard/page.js",
+  "/superadmin/dashboard/properties/page": "app/superadmin/dashboard/properties/page.js",
+  "/superadmin/dashboard/users/page": "app/superadmin/dashboard/users/page.js",
+  "/tenant/calendar/page": "app/tenant/calendar/page.js",
+  "/tenant/communications/page": "app/tenant/communications/page.js",
+  "/tenant/expenses/page": "app/tenant/expenses/page.js",
+  "/tenant/lease-details/page": "app/tenant/lease-details/page.js",
+  "/tenant/maintenance/page": "app/tenant/maintenance/page.js",
+  "/tenant/page": "app/tenant/page.js",
+  "/tenant/pay-rent/page": "app/tenant/pay-rent/page.js",
+  "/tenant/settings/page": "app/tenant/settings/page.js"
 }

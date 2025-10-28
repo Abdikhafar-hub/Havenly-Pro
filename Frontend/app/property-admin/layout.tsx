@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { 
   Home, 
   Building2, 
@@ -60,6 +60,7 @@ const navigationItems = [
 export default function PropertyAdminLayout({ children }: PropertyAdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
   const router = useRouter()
 
   useEffect(() => {
@@ -100,20 +101,20 @@ export default function PropertyAdminLayout({ children }: PropertyAdminLayoutPro
           <div className="space-y-2">
             {navigationItems.map((item, index) => {
               const Icon = item.icon
-              const isActive = index === 0 // Dashboard is active
+              const isActive = pathname === item.href || (pathname === '/property-admin' && item.href === '/property-admin/dashboard')
               return (
                 <a
                   key={item.name}
                   href={item.href}
                   className={`group flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
                     isActive 
-                      ? 'bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 border-l-4 border-blue-400 shadow-lg' 
+                      ? 'bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 border-l-4 border-blue-400 shadow-lg hover:from-blue-500/30 hover:to-purple-500/30 hover:shadow-xl' 
                       : 'text-slate-300 hover:bg-slate-700/50 hover:text-white hover:shadow-md'
                   }`}
                 >
-                  <Icon className={`mr-4 w-5 h-5 ${
-                    isActive ? 'text-blue-400' : 'text-slate-400 group-hover:text-slate-200'
-                  }`} />
+                      <Icon className={`mr-4 w-5 h-5 ${
+                        isActive ? 'text-blue-400 group-hover:text-blue-300' : 'text-blue-400/70 group-hover:text-blue-300'
+                      }`} />
                   {item.name}
                 </a>
               )

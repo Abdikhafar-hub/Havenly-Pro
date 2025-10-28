@@ -32,21 +32,33 @@ export default function LoginPage() {
     setTimeout(() => {
       setIsLoading(false)
       
-      // Check if Super Admin is selected
+      // Store authentication data and redirect based on role
       if (formData.role === "super-admin") {
-        // Store authentication data
         localStorage.setItem('token', 'super-admin-token')
         localStorage.setItem('user', JSON.stringify({
           role: 'super-admin',
           email: formData.email,
           name: 'Super Administrator'
         }))
-        
-        // Redirect to superadmin dashboard
         router.push('/superadmin/dashboard')
+      } else if (formData.role === "property-owner") {
+        localStorage.setItem('token', 'property-admin-token')
+        localStorage.setItem('user', JSON.stringify({
+          role: 'property-admin',
+          email: formData.email,
+          name: 'Property Administrator'
+        }))
+        router.push('/property-admin/dashboard')
+      } else if (formData.role === "tenant") {
+        localStorage.setItem('token', 'tenant-token')
+        localStorage.setItem('user', JSON.stringify({
+          role: 'tenant',
+          email: formData.email,
+          name: 'Tenant User'
+        }))
+        router.push('/tenant')
       } else {
-        // Handle other roles or show error
-        setError("Please select Super Admin role to access the dashboard")
+        setError("Please select a valid role to access the dashboard")
       }
     }, 1500)
   }
@@ -163,9 +175,9 @@ export default function LoginPage() {
                   className="w-full px-4 py-3 rounded-lg border border-gray-600 text-white bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
                 >
                   <option value="">Select Role</option>
-                  <option value="property-owner">Property Owner</option>
-                  <option value="tenant">Tenant</option>
                   <option value="super-admin">Super Admin</option>
+                  <option value="property-owner">Property Admin</option>
+                  <option value="tenant">Tenant</option>
                 </select>
               </div>
 
@@ -183,7 +195,7 @@ export default function LoginPage() {
                     onChange={handleChange}
                     required
                     className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-600 text-white bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
-                    placeholder="Enter your email"
+                    placeholder="Enter any email"
                   />
                 </div>
               </div>
@@ -202,7 +214,7 @@ export default function LoginPage() {
                     onChange={handleChange}
                     required
                     className="w-full pl-10 pr-10 py-3 rounded-lg border border-gray-600 text-white bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
-                    placeholder="Enter your password"
+                    placeholder="Enter any password"
                   />
                   <button
                     type="button"

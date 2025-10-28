@@ -156,3 +156,5 @@ export function QRCode({ data, size = 200, className = '' }: QRCodeProps) {
   )
 }
 
+
+

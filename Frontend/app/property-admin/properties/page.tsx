@@ -216,7 +216,7 @@ export default function PropertiesPage() {
             <span>/</span>
             <span className="text-slate-300">Properties</span>
           </div>
-          <h1 className="text-3xl font-bold text-white">My Property Overview</h1>
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">My Property Overview</h1>
         </div>
         <Button 
           onClick={() => setIsEditPropertyOpen(true)}
