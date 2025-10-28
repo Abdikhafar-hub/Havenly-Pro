@@ -1,48 +1,23 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": [
-      "static/chunks/824e2_next_dist_compiled_915b3cbb._.js",
-      "static/chunks/824e2_next_dist_shared_lib_831b1af7._.js",
-      "static/chunks/824e2_next_dist_client_eb88d372._.js",
-      "static/chunks/824e2_next_dist_898c24fd._.js",
-      "static/chunks/824e2_next_app_50dfa040.js",
-      "static/chunks/[next]_entry_page-loader_ts_f4fdd8a9._.js",
-      "static/chunks/824e2_react-dom_d9981c60._.js",
-      "static/chunks/824e2_3ab02fb5._.js",
-      "static/chunks/[root-of-the-server]__eff6da36._.js",
-      "static/chunks/Documents_havenly-pro_Frontend_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-Documents_havenly-pro_Frontend_pages__app_5836c46e._.js"
-    ],
-    "/_error": [
-      "static/chunks/824e2_next_dist_compiled_915b3cbb._.js",
-      "static/chunks/824e2_next_dist_shared_lib_c9d194e5._.js",
-      "static/chunks/824e2_next_dist_client_eb88d372._.js",
-      "static/chunks/824e2_next_dist_2957778a._.js",
-      "static/chunks/824e2_next_error_acb804b5.js",
-      "static/chunks/[next]_entry_page-loader_ts_768ec0e7._.js",
-      "static/chunks/824e2_react-dom_d9981c60._.js",
-      "static/chunks/824e2_3ab02fb5._.js",
-      "static/chunks/[root-of-the-server]__b870fe68._.js",
-      "static/chunks/Documents_havenly-pro_Frontend_pages__error_2da965e7._.js",
-      "static/chunks/turbopack-Documents_havenly-pro_Frontend_pages__error_0ff5c0a9._.js"
-    ]
+    "/_app": []
   },
   "devFiles": [],
   "polyfillFiles": [
-    "static/chunks/824e2_next_dist_build_polyfills_polyfill-nomodule.js"
+    "static/chunks/44d24_next_dist_build_polyfills_polyfill-nomodule.js"
   ],
   "lowPriorityFiles": [],
   "rootMainFiles": [
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_49db7925._.js",
-    "static/chunks/824e2_next_dist_compiled_react-dom_407564b1._.js",
-    "static/chunks/824e2_next_dist_compiled_react-server-dom-turbopack_2fab40ce._.js",
-    "static/chunks/824e2_next_dist_compiled_next-devtools_index_e72010a7.js",
-    "static/chunks/824e2_next_dist_compiled_aadc9fa5._.js",
-    "static/chunks/824e2_next_dist_client_0973b5ef._.js",
-    "static/chunks/824e2_next_dist_5182c22e._.js",
-    "static/chunks/824e2_@swc_helpers_cjs_35662d9f._.js",
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_1701fef4._.js",
+    "static/chunks/44d24_next_dist_compiled_react-dom_a1bfa91a._.js",
+    "static/chunks/44d24_next_dist_compiled_react-server-dom-turbopack_4d2bd6f8._.js",
+    "static/chunks/44d24_next_dist_compiled_next-devtools_index_e2f38075.js",
+    "static/chunks/44d24_next_dist_compiled_0ea002b6._.js",
+    "static/chunks/44d24_next_dist_client_d4d26785._.js",
+    "static/chunks/44d24_next_dist_d17d425f._.js",
+    "static/chunks/44d24_@swc_helpers_cjs_71e4d12e._.js",
     "static/chunks/Documents_havenly-pro_Frontend_a0ff3932._.js",
-    "static/chunks/turbopack-Documents_havenly-pro_Frontend_1fcd9906._.js"
+    "static/chunks/turbopack-Documents_havenly-pro_Frontend_d5427dc4._.js"
   ]
 };
 globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
